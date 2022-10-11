@@ -1,0 +1,10 @@
+{
+  "name": "frontend",
+  "version": "0.0.1",
+  "description": "web messenger frontend",
+  "main": "index.js",
+  "repository": "github.com/pchchv/web-messenger",
+  "author": "pchchv <ipchchv@gmail.com>",
+  "license": "MIT",
+  "private": false
+}
