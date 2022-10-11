@@ -1,0 +1,33 @@
+version: '3.9'
+
+services:
+  web-messanger-backend:
+    container_name: web-messanger-backend
+    image: flict/web-messanger-backend:latest
+    build: ./backend
+    ports:
+      - 8080:8000
+    restart: always
+    networks:
+        app:
+            ipv4_address: 172.16.238.10 
+    
+  web-messanger-frontend:
+    container_name: web-messanger-frontend
+    image: flict/web-messanger-frontend:latest
+    build: ./frontend
+    ports:
+      - 8000:3000
+    networks:
+        app:
+            ipv4_address: 172.16.238.11 
+    restart: always
+
+networks:
+    app:
+        driver: bridge
+        ipam:
+            driver: default
+            config:
+                - subnet: 172.16.238.0/24
+                  gateway: 172.16.238.1
