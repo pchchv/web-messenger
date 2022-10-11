@@ -18,9 +18,6 @@
         "experimentalDecorators": true,
         "removeComments": true,
         "declaration": false,
-        "paths": {
-            "@/*": ["*"]
-        },
     },
     "include": ["src", "decs.d.ts"]
 }
